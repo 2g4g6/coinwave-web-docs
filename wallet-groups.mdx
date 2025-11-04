@@ -3,5 +3,141 @@ title: "Wallet Groups"
 description: "Manage multiple wallets for bundling and volume generation"
 ---
 
-# Wallet Groups
+Wallet groups are collections of wallets used for bundling tokens and generating trading volume. Each group can contain up to 20 wallets, all managed together for efficient operations.
 
+## Wallet Group Cards
+
+Each wallet group appears as a card on your dashboard, showing key information at a glance.
+
+![Wallet Group Card](/images/wallet-group-card.png)
+
+The card displays:
+- **Group Name** and number of wallets
+- **Total Balance** across all wallets in the group
+- Quick action buttons:
+  - **Distribute**: Send SOL to all wallets in the group
+  - **Activity**: Generate human-like trading activity (volume)
+  - **Export**: Download wallet data as a file
+
+## Distributing SOL
+
+Before your wallets can trade, they need SOL. The distribute function makes this easy.
+
+![Distribute SOL](/images/wallet-group-distribute.png)
+
+1. Click the **Distribute** button on your wallet group card
+2. Enter the **Total Amount (SOL)** you want to distribute
+3. Optional: Enable **Advanced Transfer** to set min/max amounts per wallet
+4. Optional: Enable **Use Mixer** to break bubblemap connections (1% fee for one day)
+5. Click **Distribute**
+
+The SOL will be automatically divided and sent to all wallets in the group.
+
+<Note>
+Using the mixer helps create clean wallets by breaking on-chain connections visible on bubblemaps and other blockchain explorers.
+</Note>
+
+## Generate Human Activity
+
+Make your token look organic with automated trading that mimics real users.
+
+![Generate Activity](/images/wallet-group-activity-generator.png)
+
+Configure your volume bot with these settings:
+
+- **Min Balance % / Max Balance %**: Percentage of wallet balance used per buy (e.g., 10%-30%)
+- **Min Trade Delay (s) / Max Trade Delay (s)**: Time between trades in seconds (e.g., 5-15 seconds)
+- **Min Trades/Token / Max Trades/Token**: How many times each wallet trades (buy and sell count as 1 trade each)
+- **Number of Tokens**: How many different tokens to generate activity across
+
+1. Click the **Activity** button on your wallet group
+2. Configure the randomization settings
+3. Click **Generate Activity**
+
+The bot will automatically execute natural-looking trades across your wallets with randomized timing and amounts.
+
+<Warning>
+Make sure your wallets have sufficient SOL balance before generating activity. The bot needs funds to execute trades.
+</Warning>
+
+## Groups Sidebar
+
+Access advanced group management through the Groups sidebar.
+
+![Groups Sidebar](/images/wallet-group-sidebar.png)
+
+Open the sidebar by:
+- Clicking the **Groups** button in the header
+- Clicking on a wallet group card
+
+The sidebar shows:
+- **Total SOL** across all groups
+- **Total Wallets** count
+- Quick actions: **Return SOL**, **Clear Empty**, **Close Accounts**, **Sell SPL**
+- **Master Wallet** (your main wallet)
+- All your wallet groups with expandable details
+
+### Master Wallet
+
+Your master wallet is your main wallet where funds are stored. You can:
+- **Copy Address**: Copy your wallet address to clipboard
+- **Gen. Activity**: Generate activity using your master wallet
+- **Transfer**: Send SOL to other addresses
+
+#### Transferring SOL
+
+![Transfer SOL](/images/wallet-group-transfer.png)
+
+1. Click the **Transfer** icon on your Master Wallet
+2. Enter the **Destination Address**
+3. Optional: Enable **Use Mixer** for privacy (1% fee)
+4. Enter the **Amount (SOL)** or use quick percentages (25%, 50%, 75%, MAX)
+5. Review the network fee
+6. Click **Transfer**
+
+## Managing Individual Wallets
+
+Expand any wallet group to see all wallets and manage them individually.
+
+![Wallet Group Collapsed](/images/wallet-group-collapsed.png)
+
+Each wallet shows:
+- Wallet address (truncated)
+- Current SOL balance
+- **DEV** tag (if marked as developer wallet)
+- Quick action icons:
+  - Copy address
+  - Set as developer (only one per group)
+  - Transfer SOL
+  - Generate activity
+
+### Group Options
+
+Click the **three dots** on any group to access additional options.
+
+![Group Dropdown](/images/wallet-group-dropdown.png)
+
+Available actions:
+- **Distribute**: Send SOL to all wallets
+- **Gen. Activity**: Generate trading volume
+- **Return SOL**: Send all SOL back to your master wallet
+- **Sell SPL**: Sell all SPL tokens held by wallets
+- **Close Accounts**: Close empty token accounts to reclaim rent
+- **Export Wallets**: Download wallet data as a file
+- **Delete Group**: Permanently remove this wallet group
+
+<Warning>
+Deleting a group only removes it from CoinWave. Your wallets and funds remain on-chain. Make sure to export your private keys before deleting if you need them later.
+</Warning>
+
+## Best Practices
+
+- **Keep groups organized**: Use descriptive names and colors for easy identification
+- **Distribute SOL evenly**: Make sure all wallets have enough balance for trading
+- **Use realistic activity settings**: Avoid obvious patterns by using randomized delays and amounts
+- **Export regularly**: Back up your wallet data periodically
+- **Use the mixer for privacy**: Break on-chain connections when bundling tokens
+
+---
+
+Ready to deploy your first token? Learn how to use the [Twitter Tracker](/twitter-tracker) to launch tokens instantly from your feed.

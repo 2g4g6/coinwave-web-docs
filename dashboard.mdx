@@ -1,7 +1,90 @@
 ---
-title: "Dashboard Overview"
+title: "Dashboard"
 description: "Monitor your performance and manage wallet groups"
 ---
 
-# Dashboard Overview
+Your dashboard is the central hub for monitoring your activity and managing wallet groups. Everything you need is accessible from this simple interface.
 
+![Dashboard](/images/dashboard-main.png)
+
+## Navigation
+
+### Header
+
+The header gives you quick access to all main features of CoinWave.
+
+![Header](/images/dashboard-header.png)
+
+- **Groups**: Manage your wallet groups
+- **Presets**: Access and create deployment presets
+- **Close Accounts**: Quickly close token accounts
+- **Sell Tokens**: Sell your tokens
+- **Return SOL**: Return SOL from your wallets back to your main wallet
+
+### Footer
+
+The footer displays real-time market data and your wallet information.
+
+![Footer](/images/dashboard-footer.png)
+
+- **SOL Price**: Live Solana price with 24h change
+- **Tokens**: Currently monitored tokens
+- **Wallet Balance**: Your main wallet balance and address
+
+## Dashboard Stats
+
+Your dashboard shows four key metrics at a glance:
+
+- **Volume**: Total SOL traded across all your wallet groups
+- **Coins Created**: Number of tokens you've deployed all time
+- **Active Affiliates**: Users currently earning you rewards
+- **Total Balance**: Combined balance across all your wallets
+
+## Wallet Groups
+
+Wallet groups are collections of wallets used for bundling tokens and generating volume. You can create multiple groups to organize your operations.
+
+### Creating a Wallet Group
+
+Click the **"Create Group"** button to get started. You have two options:
+
+#### Option 1: Generate Wallets
+
+Generate fresh wallets automatically. Perfect for clean starts with no previous transaction history.
+
+![Generate Wallets](/images/dashboard-generate-wallets.png)
+
+1. Enter a **Group Name** to identify this wallet group
+2. Choose the **Number of Wallets** (5, 10, 15, or 20)
+3. Optionally mark the **First wallet as Dev** (this wallet will be used as the developer wallet for token deployments)
+4. Select a **Group Color** to easily identify this group
+5. Click **"Create Group"**
+
+#### Option 2: Import Wallets
+
+Import existing wallets using their private keys.
+
+![Import Wallets](/images/dashboard-import-wallets.png)
+
+1. Click the **Import Wallets** tab
+2. Enter a **Group Name**
+3. Paste your **Private Keys** (one per line, supports `publicKey:privateKey` format)
+   - Maximum 20 wallets per group
+4. Optionally mark the **First wallet as Dev**
+5. Select a **Group Color**
+6. Click **"Import Group"**
+
+<Note>
+All private keys are encrypted with AES-256 GCM encryption and stored securely. Your keys never leave your browser unencrypted.
+</Note>
+
+### Managing Wallet Groups
+
+Once created, each group shows:
+- Group name and number of wallets
+- Total balance across all wallets in the group
+- Quick actions: **Distribute** SOL, view **Activity**, and **Export** wallet data
+
+---
+
+Ready to launch your first token? Head over to the [Twitter Tracker](/twitter-tracker) to start deploying.

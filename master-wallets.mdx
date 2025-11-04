@@ -1,0 +1,116 @@
+---
+title: "Master Wallets"
+description: "Manage your primary wallets for deploying tokens and controlling funds"
+---
+
+Your master wallet is your primary wallet used for deploying tokens, managing wallet groups, and storing funds. CoinWave allows you to manage multiple master wallets, making it easy to switch between different accounts or organize your operations.
+
+## Understanding Master Wallets
+
+Master wallets are different from wallet group wallets:
+
+- **Master Wallets**: Your main wallets used as the developer wallet for token launches and as the source for distributing SOL to wallet groups
+- **Wallet Group Wallets**: Collections of wallets used for bundling and generating trading volume
+
+Think of your master wallet as your main account, while wallet groups are your worker wallets.
+
+## Managing Master Wallets
+
+Access your master wallets through the dropdown in the footer of the dashboard.
+
+![Master Wallet Dropdown](/images/master-wallet-dropdown.png)
+
+The dropdown shows:
+- **Currently active wallet** with address and SOL balance
+- **All your master wallets** (maximum 2 out of 5 shown)
+- **Add / Import Wallet** button to create or add new wallets
+- **Export All Wallets** option to backup your wallet data
+
+### Switching Between Wallets
+
+Click on any wallet in the dropdown to make it your active master wallet. The active wallet will be used for:
+- Token deployments as the developer wallet
+- Distributing SOL to wallet groups
+- All transactions you initiate
+
+## Adding Master Wallets
+
+You can add up to 5 master wallets to your account. Click **"Add / Import Wallet"** to get started.
+
+### Generate New Wallet
+
+Create a fresh wallet with a randomly generated keypair.
+
+![Generate New Wallet](/images/add-wallet-generate.png)
+
+1. Click **Generate New** tab
+2. Review the information: "A new wallet will be generated"
+3. See the preview showing **New Wallet** with "Secure randomly generated keypair"
+4. Click **Generate**
+
+<Warning>
+**Make sure to backup your private key after creation**
+
+You'll need to export your wallet and save the private key. If you lose access and don't have the key, your funds will be permanently lost.
+</Warning>
+
+### Import Existing Wallet
+
+Bring in an existing wallet using its private key.
+
+![Import Existing Wallet](/images/add-wallet-import.png)
+
+1. Click **Import Existing** tab
+2. Enter your **Private Key (Base58)** in the text field
+3. Supported formats:
+   - `privateKey`
+   - `publicKey:privateKey`
+4. Click **Import**
+
+Your wallet will be added to your account and become available in the master wallet dropdown.
+
+<Note>
+All private keys are encrypted with AES-256 GCM encryption before being stored. Your keys are never transmitted or stored in plain text.
+</Note>
+
+## Exporting Master Wallets
+
+To backup all your master wallets, use the **Export All Wallets** option in the dropdown.
+
+This will download a file containing:
+- All your master wallet addresses
+- Encrypted private keys
+- Current balances
+
+<Warning>
+Store your exported wallet file in a secure location. Anyone with access to this file and your encryption password can access your funds.
+</Warning>
+
+## Security Best Practices
+
+- **Backup immediately**: Export and securely store your wallet data after creating new wallets
+- **Never share private keys**: Your private keys give complete control over your funds
+- **Use separate wallets**: Consider using different master wallets for different operations or risk levels
+- **Monitor balances**: Regularly check your wallet balances for unauthorized transactions
+- **Secure your recovery phrase**: Your 12-word recovery phrase from signup can restore access to your original wallet
+
+## Common Use Cases
+
+### Multiple Accounts
+
+Use different master wallets to separate your operations:
+- One wallet for high-value token launches
+- Another wallet for testing and experimentation
+- A third wallet for different projects or clients
+
+### Risk Management
+
+Keep the majority of your funds in one master wallet while using another for active trading and deployments.
+
+### Organization
+
+Use different master wallets for different token projects to keep finances separated and organized.
+
+---
+
+Ready to create wallet groups for bundling? Learn how to set up [Wallet Groups](/wallet-groups) next.

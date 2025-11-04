@@ -15,7 +15,8 @@
         "pages": [
           "index",
           "signup",
-          "dashboard"
+          "dashboard",
+          "master-wallets"
         ]
       },
       {

@@ -64,8 +64,8 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:support@coinwave.gg"
+        "label": "Discord Support",
+        "href": "https://discord.gg/coinwave"
       }
     ],
     "primary": {

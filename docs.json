@@ -74,6 +74,10 @@
       "href": "https://app.coinwave.gg"
     }
   },
+  "appearance": {
+    "default": "dark",
+    "strict": true
+  },
   "contextual": {
     "options": [
      "copy",

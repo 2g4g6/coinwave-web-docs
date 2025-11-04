@@ -1,7 +1,126 @@
 ---
 title: "Settings"
-description: "Configure your CoinWave account"
+description: "Customize your CoinWave experience and trading preferences"
 ---
 
-# Settings
+Access your settings by clicking the **gear icon** in the top right corner of the dashboard. Settings are organized into three tabs: Profile, Application, and Trading.
 
+## Profile
+
+Manage your account information and connected services.
+
+![Profile Settings](/images/settings-profile.png)
+
+### Profile Information
+
+- **Email**: Your account email address
+- **Username**: Your CoinWave username
+- **Password**: Change your account password
+
+### Connected Accounts
+
+Link your external accounts to enable features:
+
+- **Telegram**: Connect your Telegram account to receive notifications and alerts
+- **Twitter/X**: Link your Twitter account for enhanced Twitter Tracker features
+
+<Note>
+Connecting your accounts is optional but enhances your CoinWave experience with notifications and seamless integrations.
+</Note>
+
+## Application
+
+Customize the general behavior and appearance of CoinWave.
+
+![Application Settings](/images/settings-application.png)
+
+### General Settings
+
+- **Default Jito Connection (Rec 4 Launch)**: Enable recommended Jito connection for launching tokens
+- **Instant TX Confirmations**: Get instant transaction confirmations instead of waiting for blockchain confirmation
+- **Jito Mode for Volume**: Use Jito mode when generating volume/activity
+- **Confirm All Actions**: Require confirmation dialogs before executing actions (recommended for safety)
+
+### Advanced Configuration
+
+Advanced settings for experienced users:
+
+- **Advanced Jito Configuration**: Customize Jito RPC settings
+- **Custom RPC Endpoints**: Add your own RPC endpoints for improved performance
+
+### Dashboard Elements
+
+Toggle which elements appear on your dashboard:
+
+- **Full Sell Elements**: Show advanced selling options
+- **Hold Per Wallet**: Display individual wallet holdings
+- **Quick Return Elements**: Show quick return SOL buttons
+- **Priority SOL Elements**: Display priority fee controls
+
+### Keyboard Shortcuts
+
+View and customize keyboard shortcuts for faster navigation:
+
+- **Twitter Feed Pause**: Spacebar to pause/unpause the Twitter feed
+
+### Themes
+
+Choose your preferred color scheme:
+
+- **Theme Picker**: Select from available themes to customize the interface
+
+## Trading
+
+Configure your trading execution settings and fee preferences.
+
+![Trading Settings](/images/settings-trading.png)
+
+### Trading Settings
+
+Core trading parameters:
+
+- **WSOL**: Use Wrapped SOL for trading (recommended for faster execution)
+- **Unit Limit (CU)**: Compute unit limit for transactions (default: 300000)
+- **Unit Price (in microlamports)**: Compute unit price for priority fees (default: 50000)
+
+### Buy/Sell Priority Fees
+
+Set priority fees for buy and sell transactions to increase execution speed:
+
+- **Buy Priority Fee**: Higher fees = faster buy execution
+- **Sell Priority Fee**: Higher fees = faster sell execution
+
+<Note>
+Priority fees are paid to validators to prioritize your transactions. Higher fees increase the likelihood of your transaction being processed quickly, especially during high network congestion.
+</Note>
+
+### Slippage
+
+Control how much price movement you'll accept:
+
+- **Default Slippage %**: Maximum price deviation you'll accept (default: 25%)
+
+Higher slippage allows trades to execute even if the price moves against you, but you may get a worse price. Lower slippage protects against price movement but may cause transaction failures.
+
+### Jito Tips
+
+Configure Jito tip amounts for different actions:
+
+- **Jito Settings**: Customize tip amounts for various transaction types
+
+Jito tips are paid to MEV searchers to bundle your transactions and get better execution. Higher tips generally result in faster and more reliable transaction inclusion.
+
+<Warning>
+Jito tips are separate from priority fees. Both help with transaction execution but serve different purposes. Jito tips are for MEV protection and bundling, while priority fees are for validator prioritization.
+</Warning>
+
+### Import/Export Settings
+
+Backup and restore your configuration:
+
+- **Import Settings**: Upload a previously exported settings file
+- **Export Settings**: Download your current settings as a file
+
+---
+
+Need help with specific features? Check out our [FAQs](/faqs) or explore the [Core Features](/twitter-tracker) documentation.

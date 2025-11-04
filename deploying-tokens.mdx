@@ -1,7 +1,214 @@
 ---
 title: "Deploying Tokens"
-description: "Learn how to deploy tokens with CoinWave"
+description: "Launch tokens instantly with advanced bundling options"
 ---
 
-# Deploying Tokens
+Deploying tokens with CoinWave is fast and flexible. Whether you want a simple launch or a complex bundled deployment with multiple wallets, we've got you covered.
 
+![Deploy Overview](/images/deploy-overview.png)
+
+## Token Information
+
+### Token Image
+
+Upload or generate your token's visual identity.
+
+**Options:**
+- **Click to upload**: Upload your own image (JPG, PNG, or GIF)
+- **Generate Ascii**: Create AI-generated ASCII art for a unique look
+- **Google Image**: Search and use images from Google
+
+![Generate ASCII](/images/deploy-generate-ascii.png)
+
+#### Searching Google Images
+
+Click the Google Image button to search for images directly.
+
+![Google Image Search](/images/deploy-google-image.png)
+
+Enter a search term and select an image from the results. This is perfect for quick meme token launches.
+
+#### Cropping Your Image
+
+After uploading or selecting an image, you can crop it to fit perfectly.
+
+![Crop Token](/images/deploy-crop-token.png)
+
+Adjust the zoom and position, then click **Apply Crop** to finalize.
+
+### Token Metadata
+
+Fill in your token's basic information:
+
+- **Name**: Your token's full name (e.g., "South Park Sucks")
+- **Ticker**: The token symbol (e.g., "SPSN") - use the shuffle button for random suggestions
+- **Description** (optional): Brief description of your token (0-500 characters)
+
+### Vamp Token
+
+Copy metadata from an existing token instantly.
+
+![Vamp Token](/images/deploy-vamp-token.png)
+
+Click **Vamp Token**, paste a contract address, and we'll automatically fetch and populate the token's name, ticker, description, and image.
+
+### Advanced Metadata (Optional)
+
+Add social links to your token's metadata:
+
+- **Website**: Your project's website URL
+- **Twitter**: Your Twitter/X handle or URL
+- **Telegram**: Your Telegram group or channel URL
+
+## Launch Configuration
+
+### Launch Platform
+
+Choose where to deploy your token:
+
+- **PumpFun**: Most popular Solana token launchpad
+- **Bonk**: Alternative launch platform
+
+### Contract Address (CA)
+
+Choose how your token's contract address is generated:
+
+- **Vanity**: Generate an address ending with your platform tag (e.g., ends with "pump")
+- **Random**: Completely random contract address
+- **Custom**: Use a custom private key to control the contract address
+
+## Launch Modes
+
+### Standard Launch
+
+Deploy a token using only your master wallet as the developer.
+
+![Standard Launch](/images/deploy-standard-launch.png)
+
+Perfect for simple launches without bundling. Your active master wallet will be used as the developer wallet for this launch.
+
+### Bundled Launch
+
+Deploy with multiple wallets for instant distribution and volume.
+
+There are three modes: safe, instant, and delayed.
+
+#### Wallet Group Selection
+
+Choose a wallet group or auto-create one on deployment.
+
+![Select Wallet Group](/images/deploy-select-wallet-group.png)
+
+**Options:**
+- **Auto-create group on deploy** (Recommended): Automatically creates a new wallet group when deploying
+- **Select existing group**: Choose from your wallet groups and pick a dev wallet
+
+#### Sniper Wallets
+
+Configure how many wallets from your group will participate in the bundled launch (0 to max group size).
+
+Use the slider to select how many wallets should snipe the token at launch.
+
+#### Insta-Sell
+
+Automatically sell tokens after purchase to create initial volume and trading activity.
+
+![Insta-Sell](/images/deploy-instasell.png)
+
+- **Enable Insta-Sell**: Toggle on to activate
+- **Delay**: Set delay in milliseconds (0ms for instant, up to 1000ms)
+  - 0ms = instant sell
+  - Higher values = delayed sell
+
+The wallets will sell immediately after launch, creating organic-looking trading activity.
+
+<Note>
+Insta-sell creates realistic trading patterns by having wallets buy and immediately sell tokens.
+</Note>
+
+#### Multi-Launch
+
+Launch the same token multiple times with different dev wallets, combining with insta-sell for maximum effect.
+
+![Multi-Launch](/images/deploy-multi-launch.png)
+
+- **Enable Multi-Launch**: Toggle on to activate
+- **Launch Count**: Number of separate launches (1-4)
+
+Each launch uses a different dev wallet, making it appear as multiple people are launching similar tokens.
+
+<Warning>
+Multi-launch is an advanced feature. Make sure you understand how it works before using it.
+</Warning>
+
+### Developer Buy Range
+
+Set a randomized buy amount for the developer wallet on each launch.
+
+![Developer Buy Range](/images/deploy-dev-buy-range.png)
+
+- **Min**: Minimum SOL to buy (e.g., 0.1 SOL)
+- **Max**: Maximum SOL to buy (e.g., 1 SOL)
+
+Each launch will randomly buy between the min and max amounts, making it look more organic.
+
+## Quick Launch Configs
+
+Save your deployment settings as presets for instant reuse. Perfect for repeating the same strategy across multiple token launches.
+
+### Creating a Quick Launch Config
+
+Click **Add Config** in the Quick Launch section to create a new preset.
+
+![Quick Launch Config](/images/quick-launch-config.png)
+
+Configure your preset:
+- **Config Name**: Name for this configuration (e.g., "quick 0.5 SOL")
+- **Dev Buy Amount**: Default SOL amount to buy on launch
+- **Enable Insta-Sell**: Toggle on to enable automatic selling after purchase
+- **Enable Multi-Launch**: Toggle on to launch multiple times in parallel
+
+#### With Advanced Options
+
+When you enable Insta-Sell and Multi-Launch, additional options appear:
+
+![Quick Launch Enabled](/images/quick-launch-enabled.png)
+
+- **Insta-Sell Delay (ms)**: Delay before selling after deployment (0 for instant)
+- **Launch Count (1-4)**: Number of parallel launches
+- **Developer Buy Range (SOL)**: Randomized buy amount between min and max
+
+Click **Create Config** to save your preset.
+
+### Using Saved Configs
+
+Your saved configs appear in the Quick Launch section for instant deployment.
+
+![Quick Launch View](/images/quick-launch-view.png)
+
+Each config shows:
+- Config name
+- Dev buy amount
+- Configured delay (if using insta-sell)
+
+Click any config to instantly apply those settings to your current deployment.
+
+## Deploying Your Token
+
+Once everything is configured:
+
+1. Set up your token information and launch settings
+2. Optionally select a Quick Launch config for instant setup
+3. Click the **Deploy Token** button
+4. Wait for the transaction to confirm
+5. Your token is now live!
+
+After deployment, you can:
+- View your token on the selected platform
+- Share the contract address with others
+- Generate additional volume using your wallet groups
+- Track performance on your dashboard
+
+---
+
+Ready to track tokens from Twitter? Learn how to use the [Twitter Tracker](/twitter-tracker) to deploy tokens in one click from your feed.

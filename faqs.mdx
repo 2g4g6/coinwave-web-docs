@@ -3,5 +3,179 @@ title: "FAQs"
 description: "Frequently asked questions about CoinWave"
 ---
 
-# FAQs
+Get answers to common questions about using CoinWave. If you can't find what you're looking for, contact our support team at [support@coinwave.gg](mailto:support@coinwave.gg).
 
+## Getting Started
+
+<AccordionGroup>
+  <Accordion title="What is CoinWave?">
+    CoinWave is a comprehensive platform for creating cryptocurrencies, packed with tools like a Volume Bot, Bundles, Twitter Tracker, and more. It's designed to help you turn your ideas into a real coin easily.
+  </Accordion>
+
+  <Accordion title="How do I create my first wallet group?">
+    Go to the **Groups** button at the top of the CoinWave interface or use your set keybind. Click **Add Group**, then enter the number of wallets you want and give the group a name.
+
+    Learn more in our [Wallet Groups](/wallet-groups) guide.
+  </Accordion>
+
+  <Accordion title="What are presets, and how do they work?">
+    Presets are ready-to-use templates for tasks like token deployment, volume generation, or wallet group creation. They save you time by storing your frequently-used configurations for instant reuse.
+
+    Check out the [Presets](/presets) page for detailed instructions.
+  </Accordion>
+</AccordionGroup>
+
+## Fees & Pricing
+
+<AccordionGroup>
+  <Accordion title="What fees does CoinWave charge?">
+    CoinWave charges a **1% fee** on buy and sell transactions. If you use the platform's mixer feature, there's an additional **2% fee**.
+
+    Your cashback tier reduces your effective fee rate. Higher tiers mean more cashback on every transaction.
+  </Accordion>
+
+  <Accordion title="Are there network fees on top of CoinWave's fees?">
+    Yes, Solana network fees (gas fees) apply to all transactions. These are usually very small, just fractions of a cent, and go directly to the Solana network, not CoinWave.
+
+    You can configure priority fees in [Settings](/settings) to speed up transaction execution during network congestion.
+  </Accordion>
+
+  <Accordion title="Do you charge for creating or managing wallets?">
+    No, creating and managing wallet groups is free. You only pay fees when you make trades, like buying or selling tokens.
+  </Accordion>
+</AccordionGroup>
+
+## Token Deployment
+
+<AccordionGroup>
+  <Accordion title="Which platforms can I deploy on?">
+    CoinWave supports token deployment on major Solana platforms like **PumpFun** and **Bonk**. Each platform has its own features and costs, which you'll see when you choose one.
+
+    Learn more about deployment options in our [Deploying Tokens](/deploying-tokens) guide.
+  </Accordion>
+
+  <Accordion title="What's the difference between Standard and Bundled launch modes?">
+    **Standard launch mode** uses individual transactions to deploy your token, while **Bundled mode** groups multiple transactions for faster and smoother launches.
+
+    Bundled mode is great for competitive token launches and supports three execution types:
+    - **Safe**: Execute at block 0
+    - **Instant**: Execute at block 1-2
+    - **Delayed**: Execute with custom millisecond intervals
+
+    Read more in the [Launch Modes](/deploying-tokens#launch-modes) section.
+  </Accordion>
+
+  <Accordion title="Can I use custom token images?">
+    Yes, you can upload custom images for your token in PNG, JPG, or GIF formats. CoinWave automatically crops and optimizes them for the best display across platforms.
+
+    You can also use the Google Image search or generate ASCII art. See [Token Image](/deploying-tokens#token-image) for details.
+  </Accordion>
+</AccordionGroup>
+
+## Volume & Trading
+
+<AccordionGroup>
+  <Accordion title="How does the Volume Bot work?">
+    The Volume Bot automates buying and selling to create organic-looking trading volume. You set parameters like buy/sell percentages and delays, and the bot executes trades using your selected wallet group.
+
+    Configure randomized settings to make trading activity appear natural and avoid obvious patterns. Learn more in [Generate Human Activity](/wallet-groups#generate-human-activity).
+  </Accordion>
+
+  <Accordion title="What are snipers and how do they work?">
+    Snipers are specialized wallets that automatically buy tokens at launch. You can configure the number of snipers and their buy amounts to ensure strong initial momentum for your token.
+
+    Snipers are configured in the [Bundled Launch](/deploying-tokens#sniper-wallets) section when deploying tokens.
+  </Accordion>
+
+  <Accordion title="Can I control individual wallet trades?">
+    Yes! You can execute trades from individual wallets through the Groups sidebar. Expand any wallet group to see all wallets and manage them individually.
+
+    Each wallet has quick action icons for transferring SOL, generating activity, and more. See [Managing Individual Wallets](/wallet-groups#managing-individual-wallets) for details.
+  </Accordion>
+</AccordionGroup>
+
+## Security & Safety
+
+<AccordionGroup>
+  <Accordion title="How does CoinWave ensure the security of my data?">
+    Your sensitive data is always encrypted in our servers using a combination of a client seed and a server seed. We use **Argon2** for secure hashing and **AES-256 in GCM mode** for encryption. This ensures the integrity and confidentiality of your data are always maintained.
+
+    In addition, we regularly audit our systems to apply updates and address any potential vulnerabilities.
+  </Accordion>
+
+  <Accordion title="How does CoinWave comply with data privacy regulations?">
+    We only collect and retain the information necessary for you to use our application. We do not collect or store any additional personal data beyond what is required for functionality.
+
+    Your account data is stored within a private network (VPC) that is not accessible from the public internet along with proper encryption and TLS termination.
+  </Accordion>
+
+  <Accordion title="What happens to my wallets if I lose access to my account?">
+    Your 12-word recovery passphrase is the **only way** to recover your wallets if you lose access to your account. This passphrase is shown only once during signup.
+
+    If you didn't save it, your funds will be permanently lost. Always store your recovery passphrase securely offline.
+  </Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Why is my transaction failing?">
+    Transaction failures can occur due to:
+    - **Insufficient SOL balance**: Check that your wallet has enough SOL for the transaction and network fees
+    - **Network congestion**: The Solana network may be busy. Try again in a few moments
+    - **Slippage issues**: Increase your slippage tolerance in [Settings](/settings)
+
+    If issues persist, try increasing your priority fees for faster transaction processing.
+  </Accordion>
+
+  <Accordion title="Why can't I see my holdings?">
+    Holdings data may take a few moments to sync after trades. Try refreshing the page.
+
+    If the issue persists:
+    - Check that you're looking at the correct wallet group
+    - Verify the transaction was confirmed on-chain (check the transaction hash on a Solana explorer)
+    - Make sure your wallet group has completed syncing
+  </Accordion>
+
+  <Accordion title="The volume bot isn't working as expected?">
+    Ensure your selected wallet group has sufficient SOL balance and that your buy/sell parameters are properly configured.
+
+    Common issues:
+    - **Insufficient balance**: Make sure all wallets in the group have enough SOL for trading
+    - **Invalid parameters**: Check that your min/max ranges are realistic and properly set
+    - **Token availability**: Verify the tokens you're trading are available and have liquidity
+
+    See the [Volume Bot configuration guide](/wallet-groups#generate-human-activity) for recommended settings.
+  </Accordion>
+
+  <Accordion title="How do I increase transaction speed?">
+    You can increase transaction speed by:
+    1. Increasing **priority fees** in [Settings > Trading](/settings#buysel-priority-fees)
+    2. Increasing **Jito tips** for MEV protection and bundling
+    3. Enabling **Default Jito Connection** in Application settings
+    4. Using **WSOL** (Wrapped SOL) for faster execution
+
+    Higher fees = faster transaction processing, especially during network congestion.
+  </Accordion>
+
+  <Accordion title="Can I cancel a transaction after it's submitted?">
+    Once a transaction is submitted to the Solana blockchain, it cannot be cancelled. However, if the transaction fails due to network issues or insufficient balance, it will not execute and your funds will remain in your wallet.
+
+    Enable **Confirm All Actions** in [Settings](/settings) to prevent accidental transactions.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Still need help?
+
+Can't find the answer you're looking for? Reach out to our support team:
+
+- **Email**: [support@coinwave.gg](mailto:support@coinwave.gg)
+- **Twitter/X**: [@coinwavegg](https://x.com/coinwavegg)
+
+You can also explore our comprehensive documentation:
+- [Getting Started Guide](/dashboard)
+- [Deploying Your First Token](/deploying-tokens)
+- [Managing Wallet Groups](/wallet-groups)
+- [Understanding Rewards](/rewards)

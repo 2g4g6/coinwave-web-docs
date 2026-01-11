@@ -1,6 +1,6 @@
 ---
 title: "Presets"
-description: "Save and reuse configurations for deployments, activity generation, and wallet groups"
+description: "Save and reuse configurations for volume botting, activity generation, and coordinated buy-ins"
 ---
 
 Presets let you save frequently-used configurations for quick access. Instead of manually configuring settings every time, create presets once and activate them with a single click.
@@ -11,9 +11,9 @@ Presets let you save frequently-used configurations for quick access. Instead of
 
 CoinWave offers three types of presets:
 
-- **Deployment Presets**: Save token deployment configurations (dev buy amount, sniper wallets, launch mode)
-- **Activity Generation Presets**: Save volume bot settings for consistent trading patterns
-- **Group Presets**: Save wallet group configurations for quick group creation
+- **Volume Presets**: Save volume botting configurations for generating trading volume
+- **Activity Presets**: Save activity generation settings to make wallets appear established
+- **Buy In Presets**: Save coordinated buy-in configurations for token purchases
 
 Each preset type has its own section where you can create, manage, and activate presets.
 
@@ -24,86 +24,79 @@ Click the **Create Preset** button at the top right to open the preset type sele
 ![Create Preset Dropdown](/images/presets-create-dropdown.png)
 
 Choose which type of preset you want to create:
-- **Deployment Preset**: For token launches
-- **Activity Preset**: For volume generation
-- **Group Preset**: For wallet group creation
+- **Volume Preset**: For volume botting
+- **Activity Preset**: For activity generation
+- **Buy In Preset**: For coordinated token buy-ins
 
-### Deployment Presets
+### Volume Presets
 
-Save your token deployment settings for consistent launches.
-
-![Create Deployment Preset](/images/presets-create-deployment.png)
+Save volume botting configurations to generate trading volume on tokens.
 
 Configure the preset:
 - **Preset Name**: Name for easy identification
-- **Dev Buy (SOL)**: Default developer buy amount
-- **Sniper Wallets**: Number of wallets to use for bundled launches (0-3+)
-- **Launch Mode**: Choose Standard or Bundled
-  - **Standard**: Simple launch with just your master wallet
-  - **Bundled**: Launch with multiple wallets for instant distribution
+- **Buy SOL Amount Range**: Min and max SOL amount per buy (e.g., 0.01 - 0.05 SOL)
+- **Buy Delay Range (seconds)**: Min and max time between buys (e.g., 1 - 6 seconds)
+- **MEV Protection**: Enable to protect transactions from MEV bots
+- **Auto Sell**: When enabled, automatically sells after buying. When disabled, only performs buys
 
 <Note>
-Bundled mode supports three execution modes: Safe (block 0), Instant (block 1-2), and Delayed (custom millisecond intervals).
+The volume bot will randomize buy amounts and delays within your specified ranges to create natural-looking trading patterns.
 </Note>
 
-Click **Create Preset** to save your configuration.
+Click **Create Preset** to save your volume botting configuration.
 
-### Activity Generation Presets
+### Activity Presets
 
-Save volume bot configurations to simulate trading activity on wallets, making them look established and organic rather than brand new.
+Save activity generation configurations to simulate trading activity on wallets, making them appear established and organic rather than brand new.
 
 ![Create Activity Preset](/images/presets-create-activity-full.png)
 
 Configure the preset:
 - **Preset Name**: Name for easy identification
 - **Buy Percentage Range (%)**: Min and max percentage of wallet balance to use per buy (e.g., 0.5% - 5%)
-- **Trade Delay Range (seconds)**: Min and max time between trades in seconds (e.g., 10 - 60)
-- **Trades Per Token Range**: Min and max number of times to trade each token (e.g., 5 - 20)
-- **Token Count**: Number of different tokens to generate activity across (e.g., 3)
+- **Trade Delay Range (seconds)**: Min and max time between trades (e.g., 10 - 60 seconds)
+- **Trades Per Token Range**: Min and max number of times to trade each token (e.g., 5 - 20 trades)
+- **Token Count**: Number of different tokens to generate activity across (e.g., 3 tokens)
 
 These settings create randomized, natural-looking trading activity that makes wallets appear active and established.
 
-### Group Presets
+### Buy In Presets
 
-Save wallet group configurations for quick group creation with automatic SOL distribution.
-
-![Create Group Preset](/images/presets-create-group.png)
+Save coordinated buy-in configurations for token purchases across multiple wallets.
 
 Configure the preset:
 - **Preset Name**: Name for easy identification
-- **Wallet Count**: Number of wallets to generate (e.g., 10)
-- **Include Dev Wallet**: Mark the first wallet as developer (Yes/No)
-- **Group Color**: Choose a color for visual identification
-- **Distribution Type**:
-  - **Simple**: Distribute equal amounts to all wallets
-  - **Advanced**: Distribute with amount range per wallet (randomized distribution)
-- **Distribution Amount (SOL)**: Total SOL to distribute to the group
+- **Buy Mode**: Choose how wallets execute their buys
+  - **Instant**: All wallets buy simultaneously
+  - **Staggered**: Wallets buy with randomized delays between transactions
+- **Buy Amount Range (SOL per wallet)**: Min and max SOL amount each wallet will spend (e.g., 0.05 - 0.15 SOL)
 
 <Note>
-When using Advanced distribution, SOL is divided randomly within a range per wallet, making the distribution appear more organic.
+Each wallet will get a random buy amount between your min and max values, creating natural-looking buy pressure without obvious patterns.
 </Note>
 
 ## Managing Presets
 
-### Deployment Preset Cards
+### Volume Preset Cards
 
-Each deployment preset appears as a card showing its configuration.
+Each volume preset appears as a card showing its configuration.
 
 ![Deployment Preset Card](/images/presets-deployment-card.png)
 
 The card displays:
 - Preset name
 - Active/Inactive status (green = active)
-- **Snipers**: Number of sniper wallets
-- **Dev Buy**: Developer buy amount in SOL
-- **Mode**: Launch mode (standard/bundled)
+- **Buy Amount**: SOL amount range per buy
+- **Buy Delay**: Delay range between buys in seconds
+- **MEV Protection**: Whether MEV protection is enabled
+- **Auto Sell**: Whether automatic selling is enabled
 - **Active button**: Click to activate this preset
 - **Deactivate button**: Appears when preset is active
 - **Delete icon**: Remove this preset
 
-### Activity Generation Preset Cards
+### Activity Preset Cards
 
-Volume bot presets show their trading configurations.
+Activity generation presets show their trading configurations.
 
 ![Activity Preset Card](/images/presets-activity-card.png)
 
@@ -117,27 +110,26 @@ The card displays:
 - **Deactivate button**: Appears when active
 - **Delete icon**: Remove preset
 
-### Group Preset Cards
+### Buy In Preset Cards
 
-Wallet group presets show their group configurations.
+Buy in presets show their coordinated purchase configurations.
 
 ![Group Preset Card](/images/presets-group-card.png)
 
 The card displays:
 - Preset name
-- **Wallets**: Number of wallets in the group
-- **Dev Wallet**: Whether dev wallet is included (Yes/No)
-- **Distribution**: Distribution type (simple/advanced)
-- **Amount**: Total SOL distribution amount
+- Active/Inactive status (green = active)
+- **Buy Mode**: Instant or Staggered execution
+- **Buy Amount**: SOL amount range per wallet
+- **Active button**: Click to activate this preset
+- **Deactivate button**: Appears when preset is active
 - **Delete icon**: Remove preset
-
-<Note>
-Group presets don't have an Active/Inactive state. Click the preset to instantly create a new wallet group with these settings.
-</Note>
 
 ## Using Presets
 
-### Activating Deployment & Activity Presets
+### Activating Presets
+
+All preset types (Volume, Activity, and Buy In) work the same way:
 
 1. Navigate to the Presets page
 2. Find the preset you want to use
@@ -146,21 +138,15 @@ Group presets don't have an Active/Inactive state. Click the preset to instantly
 
 Only one preset per type can be active at a time. Activating a new preset automatically deactivates the previous one.
 
-### Using Group Presets
-
-Group presets work differently - they create new wallet groups instantly:
-
-1. Click anywhere on the group preset card
-2. A new wallet group is created with the saved configuration
-3. SOL is automatically distributed to all wallets in the group
-
-This makes it easy to quickly set up multiple identical wallet groups for different campaigns.
+<Note>
+Active presets are automatically applied when you use their corresponding features. For example, an active Volume preset will apply its settings when you start volume botting on a token.
+</Note>
 
 ## Best Practices
 
-- **Name presets clearly**: Use descriptive names like "Quick 0.5 SOL" or "Volume 5-20 trades"
+- **Name presets clearly**: Use descriptive names like "Quick 0.05 SOL Buy" or "Activity 5-20 trades"
 - **Create presets for common strategies**: Save your most-used configurations
-- **Use group presets for consistency**: Ensure all your wallet groups have the same setup
+- **Match presets to your goals**: Use Volume presets for generating volume, Activity presets for aging wallets, and Buy In presets for coordinated purchases
 - **Deactivate when not needed**: Prevent accidental use of the wrong preset
 - **Delete unused presets**: Keep your preset list clean and organized
 

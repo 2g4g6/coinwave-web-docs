@@ -23,6 +23,7 @@
         "group": "Core Features",
         "pages": [
           "twitter-tracker",
+          "projects",
           "deploying-tokens",
           "presets",
           "wallet-groups"

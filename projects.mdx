@@ -1,0 +1,491 @@
+---
+title: "Projects"
+description: "Draft and manage token launches with full project management"
+---
+
+Projects give you complete control over your token launches. Instead of deploying instantly like the [Twitter Tracker](/twitter-tracker), you can draft projects, configure every detail, and launch when you're ready.
+
+![Projects Dashboard](/images/projects-main.png)
+
+## Projects Dashboard
+
+Your Projects dashboard is your command center for planning and managing token launches.
+
+### Dashboard Stats
+
+At the top of your dashboard, you'll see four key metrics:
+
+- **TOTAL**: Total number of projects created
+- **PENDING**: Projects configured but not yet launched
+- **LAUNCHED**: Successfully deployed tokens
+- **TOTAL PNL**: Combined profit/loss across all launched projects
+
+### Action Buttons
+
+The dashboard header provides quick access to key functions:
+
+- **Refresh**: Reload your projects list to see the latest updates
+- **Wallets**: Quick access to wallet management
+- **Import**: Clone a project from an existing contract address
+- **New Project**: Create a new project from scratch
+- **Remove All**: Delete all projects from your CoinWave view (this doesn't affect blockchain data)
+
+### Filtering Projects
+
+Use the filter tabs to organize your view:
+
+- **All / Tracker / Projects**: Switch between different project sources
+- **All / Drafts / Live**: Filter by project status
+
+The projects table displays:
+- **TOKEN**: Token name, ticker, and contract address
+- **PNL**: Profit and loss for launched tokens
+- **HOLDING**: Current token balance value
+- **MCAP**: Market capitalization
+- **ACTIONS**: Edit, Launch, Copy, and Delete buttons
+
+<Note>
+When you have no projects yet, you'll see an empty state with a rocket icon and "No projects yet" message. Click **New Project** to get started.
+</Note>
+
+## Creating a New Project
+
+Click the **New Project** button to open the project creation modal.
+
+![New Project Modal](/images/projects-create.png)
+
+### Token Image
+
+Upload or generate your token's visual identity.
+
+**Options:**
+- **Upload**: Click the dashed box to upload your own image (JPG, PNG, or GIF)
+- **AI**: Generate an AI-powered token image automatically
+
+<Note>
+The AI generation feature creates unique token images based on your token's name and concept.
+</Note>
+
+### Platform Selection
+
+Choose which platform to deploy your token on:
+
+- **PumpFun**: Most popular Solana token launchpad
+- **Mayhem**: Alternative launch platform with different features
+- **Bonk**: Another popular launch option
+
+Each platform has a colored badge indicator. Select the one that fits your strategy.
+
+### Token Metadata
+
+Fill in your token's basic information:
+
+#### Name (required)
+Your token's full name. Maximum 32 characters.
+
+Example: `Token name`
+
+#### Ticker (required)
+The token symbol that will appear on exchanges. Maximum 10 characters.
+
+Example: `TICKER`
+
+#### Description (optional)
+Brief description of your token. Maximum 500 characters.
+
+Example: `Token description...`
+
+The character count appears in the bottom-right corner (e.g., `0/500`).
+
+### Social Links (Optional)
+
+Add social media links to your token's metadata:
+
+- **Website**: Your project's website URL (e.g., `https://example...`)
+- **X**: Your Twitter/X profile URL (e.g., `https://x.com/...`)
+- **Telegram**: Your Telegram group or channel URL (e.g., `https://t.me/...`)
+
+These links will be displayed on the token's page on the launch platform.
+
+### Token Address (CA)
+
+Choose how your token's contract address is generated:
+
+![Vanity Address](/images/projects-vanity.png)
+
+#### Vanity
+Generate an address with a custom ending (e.g., ending with "pump" for PumpFun launches).
+
+When selected, you'll see:
+- **VANITY ADDRESS** header in purple
+- Generated address preview
+- **Ready to deploy** indicator with a green checkmark when complete
+
+Example: `EnXt9PrQjC7VJnhHvwJkEbp03YqeBt2ZHkdS7FqykPump`
+
+#### Random
+Generate a completely random contract address. This is the fastest option.
+
+#### Custom
+Use your own private key to generate a specific contract address. This is an advanced option for users who need precise control.
+
+<Warning>
+The vanity address generator may take a few seconds to find an address matching your criteria. Wait for the "Ready to deploy" indicator before proceeding.
+</Warning>
+
+### Creating Your Project
+
+Once you've configured everything:
+
+1. Fill in all required fields (Name and Ticker)
+2. Select your platform
+3. Choose your contract address type
+4. Optionally add description and social links
+5. Click **Create** to save your project as a draft
+
+Your project will appear in the projects list with a **DRAFT** badge.
+
+Click **Cancel** to discard and close the modal.
+
+## Importing a Project
+
+The **Import** button lets you clone an existing token as a new project.
+
+![Import Project](/images/projects-import.png)
+
+**How it works:**
+1. Click the **Import** button in the dashboard header
+2. Enter or paste an existing contract address
+3. CoinWave fetches the token's metadata from the blockchain
+4. A new draft project is created with the imported details
+
+This is useful for:
+- Recreating a successful token with similar settings
+- Analyzing and learning from existing tokens
+- Quickly setting up a project based on proven metadata
+
+<Note>
+Importing creates a new project with copied metadata. The original token on the blockchain remains unchanged.
+</Note>
+
+## Managing Projects
+
+### Project List
+
+Your projects appear in the table with key information:
+
+![Project List](/images/projects-list.png)
+
+Each row shows:
+- **Token image** (profile picture)
+- **Token name** and ticker
+- **Contract address** (truncated, e.g., `6Fu6L...NBUU`)
+- **Status badge** (DRAFT, PENDING, LAUNCHED)
+- **PNL** (profit/loss for launched tokens)
+- **HOLDING** (current token balance value)
+- **MCAP** (market capitalization)
+
+### Project Actions
+
+Hover over a project to see action buttons:
+
+- **Edit** (pencil icon): Modify project details
+- **Launch** (rocket button, green): Open the launch flow
+- **Copy** (copy icon): Copy contract address to clipboard
+- **Delete** (trash icon): Remove project from your list
+
+<Note>
+Deleting a project only removes it from your CoinWave view. If the token has already been launched on the blockchain, it remains active there.
+</Note>
+
+### Project States
+
+Projects progress through three states:
+
+1. **DRAFT**: Initial creation, not yet configured for launch
+2. **PENDING**: Fully configured and ready to launch
+3. **LAUNCHED**: Successfully deployed to the blockchain
+
+The status badge appears next to the token name in the projects list.
+
+## Launching a Project
+
+When you click the **Launch** button on a draft project, you'll enter the complete launch flow.
+
+![Launch Token](/images/projects-launch.png)
+
+The launch interface has three main sections: Token Details (left), Launch Configuration (center), and the Launch button (top right).
+
+### Step 1: Token Details
+
+Review and finalize your token's information on the left panel.
+
+#### Token Image
+- Your uploaded or generated image appears at the top
+- Click **Crop** to adjust the image crop
+- Click **ASCII** to generate an ASCII art version
+
+#### Name and Ticker
+- **Name**: Your token's full name (e.g., "yes")
+- **Ticker**: Your token symbol (e.g., "yes")
+- **Auto: Off** toggle to disable automatic ticker generation
+
+Character limits appear on the right (e.g., `3/32` for name, `3/10` for ticker).
+
+#### Contract Address
+Your generated contract address appears in a copyable field:
+
+Example: `6FuGpLBd2Du1sMWgjJhDfQTvv5UB13y0Ytr5ptxuNBUU`
+
+Click the copy icon to copy to clipboard.
+
+#### Description (Optional)
+Add or edit your token description. Maximum 500 characters.
+
+The placeholder text reads: `Token description (optional)`
+
+Character count appears in the bottom-right (e.g., `0/500`).
+
+#### Socials (Optional)
+Add social media links:
+
+- **X**: Twitter/X profile (e.g., `https://x.com/...`)
+- **Website**: Project website (e.g., `https://...`)
+- **Telegram**: Telegram group (e.g., `https://t.me/...`)
+
+### Step 2: Dev Wallet
+
+The Dev Wallet section shows your active wallet information.
+
+![Dev Wallet](/images/projects-dev-wallet.png)
+
+**Displayed information:**
+- **Wallet identifier**: Short wallet name or address (e.g., `GHtxmu...2Bju`)
+- **Balance**: Available SOL (e.g., `0.000 SOL`)
+- **Status**: "Active Master" indicator
+
+<Note>
+The dev wallet is used to deploy the token and make the initial developer purchase. Make sure your dev wallet has sufficient SOL for the deployment. Learn more about managing wallets in the [Master Wallets](/master-wallets) guide.
+</Note>
+
+### Step 3: Launch Configuration
+
+Configure how your token will be launched.
+
+#### Dev Buy Amount
+
+Set the amount of SOL your dev wallet will use to buy tokens at launch.
+
+Example: `0.5` SOL
+
+This creates the initial buy and sets up the developer's position in the token.
+
+#### Launch Mode
+
+Choose between two launch modes:
+
+**Standard** (Recommended)
+- Single-wallet launch using only your dev wallet
+- Simpler setup and lower costs
+- Perfect for straightforward launches
+
+**Bundled**
+- Multi-wallet coordinated launch
+- Multiple wallets buy simultaneously at launch
+- Creates more initial volume and distribution
+- Requires a wallet group configured with sniper wallets
+
+Learn more about launch modes in the [Deploying Tokens](/deploying-tokens#launch-modes) guide.
+
+#### Sniper Group (Optional)
+
+When using Bundled mode, select a sniper group:
+
+![Sniper Group Dropdown](/images/projects-sniper-group.png)
+
+- **None**: No sniper wallets (Standard mode)
+- **[Group Name]**: Select from your configured wallet groups
+
+Sniper groups allow multiple wallets to buy tokens simultaneously at launch, creating instant volume and distribution.
+
+Learn more about setting up wallet groups in the [Wallet Groups](/wallet-groups) guide.
+
+### Step 4: Post-Mint Actions
+
+Configure automated actions to execute after your token is minted.
+
+#### Sell Dev
+
+Toggle to automatically sell your dev tokens after launch.
+
+![Sell Dev](/images/projects-sell-dev.png)
+
+**Options:**
+- **Off**: Don't sell dev tokens
+- **Timed**: Sell after a specified delay
+
+**Description:** "Sell dev to wallet after launch"
+
+This is useful for:
+- Taking profit immediately after launch
+- Creating initial selling pressure for more organic price action
+- Testing the token's liquidity
+
+#### Volume Bots
+
+Configure automated trading bots to run after minting.
+
+![Volume Bots](/images/projects-volume-bots.png)
+
+**Description:** "Bots to run after minting"
+
+**Empty state:**
+When no bots are configured, you'll see:
+- Robot icon in the center
+- "No volume bots configured"
+- "Click 'Add Bot' to get started"
+
+**Add Bot** button to configure volume bots.
+
+Volume bots:
+- Generate trading activity after launch
+- Create natural-looking buy and sell patterns
+- Help establish price discovery
+- Make your token appear more active
+
+<Warning>
+Volume bots should be used responsibly. Excessive or unnatural trading patterns may be flagged by platforms or community members.
+</Warning>
+
+### Step 5: Cost Summary
+
+The Cost Summary section breaks down all costs for your launch.
+
+![Cost Summary](/images/projects-cost-summary.png)
+
+**Cost breakdown:**
+
+- **Dev Buy**: The SOL amount for your developer purchase (e.g., `0.5 SOL`)
+- **Platform Fee**: The launch platform's fee (e.g., `0.008 SOL`)
+- **Total Required**: Combined cost (e.g., `~0.508 SOL`)
+
+#### Balance Validation
+
+If your dev wallet doesn't have sufficient balance, you'll see an error:
+
+**"Insufficient balance in dev wallet"** (displayed in red)
+
+In this case:
+1. Add more SOL to your dev wallet
+2. Reduce the Dev Buy Amount
+3. Switch to a different master wallet with sufficient balance
+
+<Note>
+Always ensure your dev wallet has slightly more than the Total Required amount to account for transaction fees and potential blockchain congestion.
+</Note>
+
+### Step 6: Launch Execution
+
+Once everything is configured, you're ready to launch.
+
+#### Open Swap Panel (Optional)
+
+Toggle the **Open Swap Panel** option in the top-right corner to automatically open a swap interface after launching. This is useful for immediately trading your newly launched token.
+
+#### Launch Button
+
+Click the **Launch** button (green, top-right) to execute the deployment.
+
+![Launch Button](/images/projects-launch-button.png)
+
+**What happens when you launch:**
+
+1. **Transaction Creation**: Your configuration is packaged into a blockchain transaction
+2. **Signing**: You'll be prompted to sign the transaction with your dev wallet
+3. **Broadcasting**: The transaction is sent to the Solana blockchain
+4. **Confirmation**: Wait for blockchain confirmation (usually 1-30 seconds)
+5. **Success**: Your token is now live!
+
+**After successful launch:**
+- Your project status updates to **LAUNCHED**
+- The token appears on the selected platform (PumpFun, Mayhem, or Bonk)
+- Any configured post-mint actions (Sell Dev, Volume Bots) execute automatically
+- The Swap Panel opens if you enabled that option
+- You can share the contract address with others
+
+<Note>
+Keep the window open during launch. Closing it may interrupt the process and cause errors.
+</Note>
+
+## Remove All Projects
+
+The **Remove All** button in the dashboard header lets you delete all projects from your CoinWave view at once.
+
+**What it does:**
+- Removes all projects from your local projects list
+- Clears your Projects dashboard
+- Does NOT affect tokens already launched on the blockchain
+
+**When to use it:**
+- Starting fresh with a clean slate
+- Clearing out old test projects
+- Removing failed or abandoned drafts
+
+<Warning>
+This action cannot be undone. Make sure you've saved any important contract addresses or project details before removing all projects.
+</Warning>
+
+## Projects vs Twitter Tracker
+
+CoinWave offers two ways to launch tokens:
+
+### Projects
+- **Workflow**: Draft → Configure → Launch when ready
+- **Best for**: Planned launches with careful configuration
+- **Benefits**: Full control, save drafts, review before launch
+- **Use case**: Professional launches, tokens with specific requirements
+
+### Twitter Tracker
+- **Workflow**: See tweet → Deploy instantly
+- **Best for**: Fast reaction to trending content
+- **Benefits**: Speed, one-click deployment from feed
+- **Use case**: Meme tokens, viral content, rapid response
+
+Both approaches lead to the same powerful launch system, so choose the workflow that fits your strategy.
+
+Learn more about Twitter Tracker in the [Twitter Tracker](/twitter-tracker) guide.
+
+## Best Practices
+
+### Planning Your Launch
+- Draft projects in advance during off-peak hours
+- Test with small Dev Buy amounts first
+- Review all settings before launching
+- Ensure sufficient wallet balance with buffer for fees
+
+### Using Drafts
+- Create multiple project drafts for different strategies
+- Compare different configurations side-by-side
+- Save proven configurations for future launches
+
+### Managing Projects
+- Regularly review and clean up old drafts
+- Archive contract addresses of successful launches
+- Delete failed or abandoned projects to keep your list clean
+
+### Launch Timing
+- Monitor platform activity and market conditions
+- Consider time zones and peak trading hours
+- Coordinate with marketing efforts if applicable
+
+## Quick Tips
+
+- **Vanity addresses**: Take a few seconds to generate but create memorable contract addresses
+- **Import feature**: Quickly clone successful token configurations
+- **Draft status**: Projects stay in draft until you explicitly launch them
+- **Cost estimation**: Always check the Cost Summary before launching
+- **Balance buffer**: Keep extra SOL in your dev wallet for fees
+
+---
+
+Ready to start creating tokens? Click **New Project** on your Projects dashboard or head to the [Twitter Tracker](/twitter-tracker) for instant deployments from your feed.

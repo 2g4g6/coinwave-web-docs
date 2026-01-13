@@ -1,0 +1,293 @@
+---
+title: "Launch Manager"
+description: "Manage live token launches with buying/selling controls, volume bots, and real-time monitoring"
+---
+
+The Launch Manager is your command center for managing tokens after they've been deployed. It provides real-time monitoring, coordinated buying and selling across multiple wallets, and automated volume generation.
+
+![Launch Manager](/images/launch-manager.png)
+
+## Interface Overview
+
+The Launch Manager interface is divided into several key areas:
+
+### Coin Info Panel (Top Left)
+
+The header displays your token's vital statistics:
+
+- **Token Image & Name**: Your token's profile picture, name, and ticker
+- **LIVE Badge**: Indicates the token is actively trading
+- **Contract Address**: Truncated address with copy button
+- **HOLDING**: Current value of your token holdings
+- **PNL**: Profit and loss for this token
+- **MCAP**: Current market capitalization
+- **CURVE**: Bonding curve progress percentage
+
+#### Quick Action Buttons
+
+Below the stats, you'll find quick action buttons:
+
+- **Swap Panel**: Open the trading interface
+- **Lock Tokens**: Lock liquidity tokens
+- **Pay DEX**: Pay for DEX listing
+- **Creator Fees**: Manage creator fee settings
+
+### Tasks Area (Middle Left)
+
+The Tasks section lets you manage automated operations running on your token.
+
+When no tasks are active, you'll see:
+- "No active tasks" message
+- Tasks appear here when you start volume bots or other automated operations
+
+### Activity Monitor (Bottom Left)
+
+Real-time feed of all trading activity on your token.
+
+Each transaction shows:
+- **Type**: BUY (green) or SELL (red)
+- **Wallet**: Truncated wallet address
+- **YOU Badge**: Highlights your own transactions
+- **Time**: When the trade occurred (e.g., "1d ago")
+- **Value**: USD value of the trade
+- **Amount**: SOL amount traded
+
+Toggle **Hide My Trades** to filter out your own transactions and see only external trading activity.
+
+### Holders Table (Right Side)
+
+The main panel shows all wallets holding your token with powerful bulk management controls.
+
+#### Header Controls
+
+- **Silent Notifications**: Toggle notification sounds
+- **Sell Dev**: Quick sell from your developer wallet
+- **Sell All**: Sell tokens from all wallets
+- **Wallets**: Access wallet management
+- **Customize**: Customize the table display
+
+#### Wallet Groups
+
+Your wallet groups appear as expandable sections. Click to expand and see individual wallets.
+
+Each group header shows:
+- Group name (e.g., "test")
+- Number of wallets (e.g., "20 wallets")
+- Total SOL balance
+- **Buy In**: Coordinated buying across the group
+- **Volume Bot**: Start automated volume generation
+- **Sell All**: Sell tokens from all wallets in the group
+
+#### Individual Wallet Rows
+
+Each wallet row displays:
+- **WALLET**: Truncated wallet address
+- **SOL**: Current SOL balance
+- **TOKENS**: Number of tokens held
+
+**Quick Buy Buttons**: Preset SOL amounts for instant buying
+- `0.1` | `0.5` | `1` | `2` SOL
+
+**Quick Sell Buttons**: Percentage-based selling
+- `25%` | `50%` | `75%` | `100%`
+
+## Buy In Mode
+
+Click the **Buy In** button on any wallet group to access coordinated buying options.
+
+![Buy Mode](/images/launch-manager-buy-mode.png)
+
+Two modes are available:
+
+### Instant Mode
+
+Bundle all selected wallets into a single transaction for simultaneous buying.
+
+**Best for:**
+- Maximum speed
+- Coordinated entry at the same price point
+- Avoiding front-running
+
+### Staggered Mode
+
+Execute buys with custom delays between each wallet.
+
+**Best for:**
+- Creating natural-looking buying patterns
+- Avoiding detection as coordinated activity
+- Spreading buys across time for better average prices
+
+## Instant Buy Modal
+
+When you select Instant mode, this modal appears:
+
+![Instant Buy](/images/launch-manager-instant-buy.png)
+
+### Buy Amounts
+
+Configure how much each wallet will buy:
+
+- **Wallet Selection**: Check/uncheck individual wallets
+- **Select All / Deselect All**: Quick selection toggles
+- **Amount Field**: Enter SOL amount per wallet
+- **MAX Button**: Use wallet's entire balance
+
+### Total Buy Amount
+
+Shows the combined SOL that will be spent across all selected wallets.
+
+Example: "20 wallets will buy in a single bundle"
+
+### Actions
+
+- **Cancel**: Close without executing
+- **Instant Buy**: Execute the coordinated purchase
+
+<Note>
+Instant buys bundle all transactions together, which is faster but may be more visible on-chain as coordinated activity.
+</Note>
+
+## Staggered Buy Modal
+
+When you select Staggered mode, this modal appears:
+
+![Staggered Buy](/images/launch-manager-staggered-buy.png)
+
+### Buy Amounts
+
+Same as Instant mode - select wallets and set individual amounts.
+
+### Timing Mode
+
+Choose how delays are calculated:
+
+#### Delay Range
+
+Set minimum and maximum delays, with random timing between them.
+
+- **Min Delay (ms)**: Minimum wait between buys (e.g., 1000ms = 1 second)
+- **Max Delay (ms)**: Maximum wait between buys (e.g., 3000ms = 3 seconds)
+
+The system will pick a random delay within your range for each wallet.
+
+Example display: "Random delay between 1.0s and 3.0s per wallet"
+
+#### Exact Timings
+
+Set specific delays for each individual wallet for precise control.
+
+### Total Buy Amount
+
+Shows combined SOL and execution plan:
+
+Example: "20 wallets will buy sequentially with the configured delays"
+
+### Actions
+
+- **Cancel**: Close without executing
+- **Start Staggered Buy**: Begin the sequential buying process
+
+<Note>
+Staggered buys take longer to complete but create more natural-looking on-chain activity.
+</Note>
+
+## Volume Bot
+
+The Volume Bot automates trading to generate organic-looking activity on your token.
+
+![Volume Bot](/images/launch-manager-volume-bot.png)
+
+### Configuration
+
+#### Wallet Group
+
+Select which wallet group to use for volume generation.
+
+Shows:
+- Group name
+- Total SOL balance
+- Number of wallets
+
+#### Select Wallets
+
+Choose specific wallets within the group to participate.
+
+- **Select All / Deselect All**: Quick toggles
+- Individual wallet checkboxes with addresses
+
+#### Buy Delay Range (seconds)
+
+Control the timing between buy transactions:
+
+- **Min**: Minimum seconds between buys
+- **Max**: Maximum seconds between buys
+
+Example: Min 1, Max 6 means buys occur randomly between 1-6 seconds apart.
+
+Label: "Time between buy transactions"
+
+#### Buy SOL Amount
+
+Set the SOL range for each purchase:
+
+- **Min**: Minimum SOL per buy
+- **Max**: Maximum SOL per buy
+
+Example: Min 0.01, Max 0.05 means each buy uses between 0.01-0.05 SOL.
+
+Label: "SOL amount used per buy (random within range)"
+
+### Options
+
+#### MEV Protection
+
+Toggle: **Use Astralane for transaction protection**
+
+When enabled, transactions are routed through Astralane to protect against MEV (Maximal Extractable Value) attacks like front-running and sandwich attacks.
+
+#### Auto Sell
+
+Toggle: **When disabled, the volume bot will only perform buys**
+
+- **Enabled**: Bot will both buy and sell to create two-way volume
+- **Disabled**: Bot only buys, useful for accumulation or price support
+
+### Actions
+
+- **Cancel**: Close without starting
+- **Start Volume Bot**: Begin automated volume generation
+
+<Warning>
+Volume bots consume SOL from the selected wallets. Ensure wallets have sufficient balance before starting. Monitor your tasks area to track progress and stop if needed.
+</Warning>
+
+## Best Practices
+
+### Managing Live Tokens
+
+- Monitor the Activity feed to understand trading patterns
+- Use the Holders table to track wallet distributions
+- Keep sufficient SOL in wallets for quick responses
+
+### Coordinated Buying
+
+- Use **Instant mode** when speed is critical
+- Use **Staggered mode** for more natural-looking accumulation
+- Set realistic delay ranges (1-6 seconds) to appear organic
+
+### Volume Generation
+
+- Start with small amounts to test settings
+- Use MEV protection for larger trades
+- Monitor the Tasks area to track bot progress
+- Adjust delay and amount ranges based on token activity
+
+### Selling
+
+- Use percentage buttons for quick partial sells
+- Use **Sell All** only when fully exiting a position
+- Monitor the Activity feed after selling to see market response
+
+---
+
+Ready to launch a new token? Learn how to create and configure projects in the [Projects](/projects) guide, or set up your wallets in [Wallet Groups](/wallet-groups).

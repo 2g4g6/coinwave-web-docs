@@ -24,6 +24,7 @@
         "pages": [
           "twitter-tracker",
           "projects",
+          "launch-manager",
           "deploying-tokens",
           "presets",
           "wallet-groups"
